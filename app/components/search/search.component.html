@@ -1,1 +1,9 @@
-Search component html
+<h3>Search for your favorite songs!</h3>
+<form>
+    <div class="form-group"> 
+    <input class="form-control" 
+           placeholder="Please enter artist name..."
+           type="text" name="searchStr" [(ngModel)]="searchStr" 
+           (keyup)="searchArtist()">
+    </div>
+</form>
