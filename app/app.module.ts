@@ -11,7 +11,7 @@ import { AboutComponent } from './components/about/about.component';
 import { routing } from './app.routing';
 
 @NgModule({
-  imports:      [ BrowserModule, routing, FormsModule ],
+  imports:      [ BrowserModule, routing, FormsModule, HttpModule ],
   declarations: [ AppComponent, NavbarComponent, SearchComponent, AboutComponent ],
   bootstrap:    [ AppComponent ]
 })

@@ -7,9 +7,17 @@ import { SpotifyService } from '../../services/spotify.service';
   templateUrl: 'search.component.html',
 })
 export class SearchComponent  { 
-  searchStr:String;
+  searchStr:string;
+
+  //Inject the spotify service into the constructor.
+  constructor(private _spotifyService:SpotifyService) {
+
+  }
 
   searchArtist() {
-
+      //console.log(this.searchStr);
+      this._spotifyService.searchArtist(this.searchStr).subscribe(res => {
+        //console.log(res);
+      });
   }
  }
