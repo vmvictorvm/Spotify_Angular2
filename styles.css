@@ -5,3 +5,13 @@
 .track-link {
     margin-bottom: 50px;
 }
+
+.album-style {
+    height: 450px;
+}
+
+.album-pic {
+    max-height: 300px;
+    display:block;
+    margin:auto;
+}

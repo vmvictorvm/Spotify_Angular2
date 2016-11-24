@@ -1,8 +1,14 @@
 <div *ngIf="artist">
-    {{artist.name}} page!
-    <div *ngFor="let album of albums">
-        <img class="img-thumbnail" src="{{album.images[0].url}}">
-        <h4>{{album.name}}</h4>
-        <a class="btn btn-default btn-block" routerLink="/album/{{album.id}}">View Album</a>
+    <h2>{{artist.name}}'s albums</h2>
+    <div class="row"> 
+        <div *ngFor="let album of albums">
+            <div class="col-md-4">
+                <div class="album-style well">
+                    <img class="img-thumbnail album-pic" src="{{album.images[0].url}}">
+                    <h4>{{album.name}}</h4>
+                    <a class="btn btn-default btn-block" routerLink="/album/{{album.id}}">View Album</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
