@@ -1,0 +1,7 @@
+<div *ngIf="album">   
+    {{album.name}}
+    <div *ngFor="let track of album.tracks.items">
+            {{track.name}}
+           <a href="{{track.preview_url}}" target="_blank">Preview song!</a>
+    </div>
+</div>
