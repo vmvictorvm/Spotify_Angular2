@@ -1,7 +1,15 @@
 <div *ngIf="album">   
-    {{album.name}}
-    <div *ngFor="let track of album.tracks.items">
-            {{track.name}}
-           <a href="{{track.preview_url}}" target="_blank">Preview song!</a>
+    <div class="row">
+            <h3>{{album.name}}</h3>
+            <img class="img-responsive" src="{{album.images[0].url}}">      
     </div>
+    <div class="row tracks-section well">
+            <div *ngFor="let track of album.tracks.items">   
+                <div class="track-link">
+                    <h5>Track #{{track.track_number}} - {{track.name}}</h5>
+                    <a href="{{track.preview_url}}" target="_blank">Preview song!</a>
+                </div>  
+            </div>
+    </div>
+
 </div>
